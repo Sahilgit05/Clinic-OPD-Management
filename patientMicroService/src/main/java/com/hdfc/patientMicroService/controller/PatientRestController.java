@@ -29,7 +29,7 @@ public class PatientRestController {
     }
 
     @DeleteMapping("delete-by-id/{patientId}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable int patientId){
+    public ResponseEntity<String> deletePatientInfo(@PathVariable int patientId){
 
         service.deletePatientInfo(patientId);
 
