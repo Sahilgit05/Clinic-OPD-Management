@@ -6,6 +6,8 @@ import com.hdfc.appointment.repository.IAppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AppointmentService implements IAppointmentService{
     @Autowired
@@ -40,4 +42,10 @@ public class AppointmentService implements IAppointmentService{
         repo.deleteById(appointmentId);
 
     }
+
+    @Override
+    public List<Appointment> findByDoctorId(int doctorId) {
+        return repo.findByDoctorId(doctorId);
+    }
+
 }

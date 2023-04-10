@@ -1,5 +1,6 @@
 package com.hdfc.appointment.dto;
 
+import com.hdfc.appointment.vo.Patient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,4 +17,6 @@ public class AppointmentDto {
     private String time;
 
     private String status;
+
+    private Patient patient;
 }

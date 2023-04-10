@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/doctor/microservice")
 public class DoctorRestController {
@@ -34,6 +36,20 @@ public class DoctorRestController {
         service.deleteDoctorInfo(doctorId);
 
         return new ResponseEntity<String>("Doctor Record with ID="+" "+doctorId+" "+"Deleted", HttpStatus.ACCEPTED);
+
+    }
+
+    @GetMapping("get-doctor-by-id-with-Appointment/{doctorId}")
+    public Doctor getDoctorWithAppointments(@PathVariable int doctorId){
+
+        return service.getDoctorWithAppointments(doctorId);
+
+    }
+
+    @GetMapping("get-doctor-with-specialization/{specialization}")
+    public List<Doctor> getDoctorsWithSpecialization(@PathVariable String specialization){
+
+        return service.findByDoctorSpecialization(specialization);
 
     }
 }

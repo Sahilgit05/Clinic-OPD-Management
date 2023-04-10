@@ -1,10 +1,12 @@
 package com.hdfc.doctorMicroService.entity;
 
+import com.hdfc.doctorMicroService.vo.Appointment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,4 +23,9 @@ public class Doctor {
     private String lastName;
     private String contactNumber;
     private String specialization;
+    @OneToMany
+    @JoinColumn(name="doctor_id")
+    private List<Schedule> schedule;
+    @Transient
+    private List<Appointment> appointmentList;
 }

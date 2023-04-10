@@ -1,16 +1,18 @@
-package com.hdfc.doctorMicroService.dto;
+package com.hdfc.patientMicroService.vo;
 
-import com.hdfc.doctorMicroService.vo.Appointment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorDto {
+public class Doctor {
 
     private int doctorId;
     private String firstName;
@@ -19,5 +21,4 @@ public class DoctorDto {
     private String contactNumber;
     private String specialization;
 
-    private List<Appointment> appointmentList;
 }
