@@ -1,6 +1,7 @@
 package com.hdfc.appointment.entity;
 
-import com.hdfc.appointment.vo.Patient;
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,9 +23,14 @@ public class Appointment {
     private String date;
     private String time;
 
+    private String email;
+
     private String status;
-    @Transient
-    private Patient patient;
+
+    //@OneToOne(mappedBy = "appointment",cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="reminder_id")
+    private Reminder reminder;
 
 
 }

@@ -1,6 +1,7 @@
 package com.hdfc.appointment.dto;
 
-import com.hdfc.appointment.vo.Patient;
+import com.hdfc.appointment.entity.Reminder;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,11 @@ public class AppointmentDto {
     private String date;
     private String time;
 
+    private String email;
+
     private String status;
 
-    private Patient patient;
+    private Reminder reminder;
+
+
 }

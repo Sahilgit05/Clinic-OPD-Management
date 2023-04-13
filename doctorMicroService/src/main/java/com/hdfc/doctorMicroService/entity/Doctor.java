@@ -1,5 +1,6 @@
 package com.hdfc.doctorMicroService.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hdfc.doctorMicroService.vo.Appointment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +26,7 @@ public class Doctor {
     private String specialization;
     @OneToMany
     @JoinColumn(name="doctor_id")
+    @JsonIgnore
     private List<Schedule> schedule;
     @Transient
     private List<Appointment> appointmentList;

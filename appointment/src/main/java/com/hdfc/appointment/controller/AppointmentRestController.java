@@ -46,4 +46,15 @@ public class AppointmentRestController {
 
 
     }
+
+    @GetMapping("/getting/appointments-by-date/{date}")
+    public List<Appointment> getAppointmentsForDate(@PathVariable String date){
+
+        List<Appointment> list=service.findByDate(date);
+
+        return list;
+
+
+
+    }
 }

@@ -1,0 +1,12 @@
+
+
+
+
+
+Hibernate: create table reminder (reminder_id integer not null auto_increment, reminder_type varchar(255), appointment_id integer, primary key (reminder_id)) engine=InnoDB
+Hibernate: alter table reminder add constraint FKaum6vu5f1ilmllkqcjlka6rck foreign key (appointment_id) references appointment (appointment_id)
+
+
+
+
+Google mail app password==irseptrirztunktt
