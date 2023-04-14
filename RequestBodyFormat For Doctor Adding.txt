@@ -1,0 +1,23 @@
+{
+  "doctorId": 0,
+  "firstName": "Dr.Siraj",
+  "lastName": "Mohamad",
+  "contactNumber": "5689345749",
+  "specialization": "Pedicatrician",
+  "schedule": [
+    {
+      "scheduleId": 0,
+      "doctorId": 0,
+      "dayOfWeek": "Monday",
+      "timeSlot": "9am-12pm",
+      "availability": "Available"
+    },
+    {
+      "scheduleId": 0,
+      "doctorId": 0,
+      "dayOfWeek": "Tuesday",
+      "timeSlot": "9am-12pm",
+      "availability": "Available"
+    }
+  ]
+}

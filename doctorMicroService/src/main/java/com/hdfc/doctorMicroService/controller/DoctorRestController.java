@@ -39,12 +39,12 @@ public class DoctorRestController {
 
     }
 
-    @GetMapping("get-doctor-by-id-with-Appointment/{doctorId}")
-    public Doctor getDoctorWithAppointments(@PathVariable int doctorId){
-
-        return service.getDoctorWithAppointments(doctorId);
-
-    }
+//    @GetMapping("get-doctor-by-id-with-Appointment/{doctorId}")
+//    public Doctor getDoctorWithAppointments(@PathVariable int doctorId){
+//
+//        return service.getDoctorWithAppointments(doctorId);
+//
+//    }
 
     @GetMapping("get-doctor-with-specialization/{specialization}")
     public List<Doctor> getDoctorsWithSpecialization(@PathVariable String specialization){

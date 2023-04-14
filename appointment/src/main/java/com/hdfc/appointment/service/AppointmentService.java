@@ -58,5 +58,10 @@ public class AppointmentService implements IAppointmentService{
         return repo.findByDate(date);
     }
 
+    @Override
+    public boolean existById(int appointmentId) {
+        return repo.existsById(appointmentId);
+    }
+
 
 }

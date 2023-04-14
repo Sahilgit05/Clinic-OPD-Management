@@ -13,7 +13,7 @@ public interface IDoctorService {
 
     public void deleteDoctorInfo(int doctorId);
 
-    public Doctor getDoctorWithAppointments(int doctorId);
+   // public Doctor getDoctorWithAppointments(int doctorId);
 
     public List<Doctor> findByDoctorSpecialization(String specialization);
 }

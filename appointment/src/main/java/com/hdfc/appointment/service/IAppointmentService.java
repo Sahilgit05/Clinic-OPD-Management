@@ -17,6 +17,8 @@ public interface IAppointmentService {
 
     public List<Appointment> findByDate(String date);
 
+    public boolean existById(int appointmentId);
+
 
 
 

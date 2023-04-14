@@ -28,6 +28,6 @@ public class Doctor {
     @JoinColumn(name="doctor_id")
     @JsonIgnore
     private List<Schedule> schedule;
-    @Transient
-    private List<Appointment> appointmentList;
+//    @Transient
+//    private List<Appointment> appointmentList;
 }

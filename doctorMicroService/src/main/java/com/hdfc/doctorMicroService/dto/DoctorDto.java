@@ -1,5 +1,6 @@
 package com.hdfc.doctorMicroService.dto;
 
+import com.hdfc.doctorMicroService.entity.Schedule;
 import com.hdfc.doctorMicroService.vo.Appointment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,5 +20,7 @@ public class DoctorDto {
     private String contactNumber;
     private String specialization;
 
-    private List<Appointment> appointmentList;
+    private List<Schedule> schedule;
+
+   // private List<Appointment> appointmentList;
 }

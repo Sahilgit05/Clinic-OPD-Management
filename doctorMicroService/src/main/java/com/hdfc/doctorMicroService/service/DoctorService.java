@@ -28,6 +28,7 @@ public class DoctorService implements IDoctorService{
         doctor.setLastName(doctorDto.getLastName());
         doctor.setContactNumber(doctorDto.getContactNumber());
         doctor.setSpecialization(doctorDto.getSpecialization());
+        doctor.setSchedule(doctorDto.getSchedule());
         return repo.save(doctor);
     }
 
@@ -39,6 +40,7 @@ public class DoctorService implements IDoctorService{
         doctor.setLastName(doctorDto.getLastName());
         doctor.setContactNumber(doctorDto.getContactNumber());
         doctor.setSpecialization(doctorDto.getSpecialization());
+        doctor.setSchedule(doctorDto.getSchedule());
         return repo.save(doctor);
     }
 
@@ -49,18 +51,18 @@ public class DoctorService implements IDoctorService{
 
     }
 
-    @Override
-    public Doctor getDoctorWithAppointments(int doctorId) {
-        Doctor doctor= repo.findById(doctorId).orElse(null);
-
-        List<Appointment> appointmentList=restTemplate.getForObject("http://localhost:6063/api/appointment/microservice/getting/appointments-by-doctorId/"+doctorId, List.class);
-
-        doctor.setAppointmentList(appointmentList);
-
-        return doctor;
-
-
-    }
+//    @Override
+//    public Doctor getDoctorWithAppointments(int doctorId) {
+//        Doctor doctor= repo.findById(doctorId).orElse(null);
+//
+//        List<Appointment> appointmentList=restTemplate.getForObject("http://localhost:6063/api/appointment/microservice/getting/appointments-by-doctorId/"+doctorId, List.class);
+//
+//        doctor.setAppointmentList(appointmentList);
+//
+//        return doctor;
+//
+//
+//    }
 
     @Override
     public List<Doctor> findByDoctorSpecialization(String specialization) {
